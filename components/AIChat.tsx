@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Sparkles, Loader2, Bot } from 'lucide-react';
+import { MessageSquare, X, Send, Bot, Loader2, Sparkles } from 'lucide-react';
 import { sendMessageToGemini } from '../services/geminiService';
 import { ChatMessage } from '../types';
 
+const INITIAL_MESSAGE: ChatMessage = {
+  id: 'welcome',
+  role: 'model',
+  text: "Hi! I'm Naman's AI assistant. Ask me anything about his 8+ years of distributed systems engineering, banking solutions at RBC, Albertsons Kafka CDC, or avionics at Boeing!",
+  timestamp: new Date(),
+};
+
 const AIChat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      id: 'welcome',
-      role: 'model',
-      text: "Hi! I'm Naman's AI assistant. Ask me anything about his work at UST with RBC Online Banking, Albertsons, Boeing Avionics, or his expertise in Java 21, Kafka CDC, Vault, and Agentic AI!",
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([INITIAL_MESSAGE]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -22,7 +22,9 @@ const AIChat: React.FC = () => {
   };
 
   useEffect(() => {
-    scrollToBottom();
+    if (isOpen) {
+      scrollToBottom();
+    }
   }, [messages, isOpen]);
 
   const handleSend = async () => {
@@ -32,22 +34,22 @@ const AIChat: React.FC = () => {
       id: Date.now().toString(),
       role: 'user',
       text: inputValue,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
 
-    setMessages(prev => [...prev, userMsg]);
+    setMessages((prev) => [...prev, userMsg]);
     setInputValue('');
     setIsLoading(true);
 
     try {
       const responseText = await sendMessageToGemini(userMsg.text);
-      const aiMsg: ChatMessage = {
+      const botMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'model',
         text: responseText,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
-      setMessages(prev => [...prev, aiMsg]);
+      setMessages((prev) => [...prev, botMsg]);
     } catch (error) {
       console.error(error);
     } finally {
@@ -68,12 +70,12 @@ const AIChat: React.FC = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 border border-gray-200 bg-white ${
-          isOpen ? 'text-gray-900 rotate-90' : 'text-[#0071e3] hover:text-[#0077ed]'
+          isOpen ? 'text-gray-900 rotate-90' : 'text-emerald-600 hover:text-emerald-700'
         }`}
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
         {!isOpen && (
-          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#0071e3] rounded-full border-2 border-white shadow-xs"></span>
+          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-600 rounded-full border-2 border-white shadow-xs"></span>
         )}
       </button>
 
@@ -88,7 +90,7 @@ const AIChat: React.FC = () => {
           {/* Header */}
           <div className="bg-gray-50 p-3.5 sm:p-4 flex items-center justify-between border-b border-gray-200">
             <div className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0071e3]">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
                 <Bot className="w-4 h-4 sm:w-5 h-5" />
               </div>
               <div>
@@ -119,7 +121,7 @@ const AIChat: React.FC = () => {
                 <div 
                   className={`max-w-[82%] p-3.5 rounded-2xl text-sm leading-relaxed ${
                     msg.role === 'user' 
-                      ? 'bg-[#0071e3] text-white rounded-br-sm shadow-xs' 
+                      ? 'bg-emerald-600 text-white rounded-br-sm shadow-xs' 
                       : 'bg-gray-100 border border-gray-200/70 text-gray-800 rounded-bl-sm'
                   }`}
                 >
@@ -130,7 +132,7 @@ const AIChat: React.FC = () => {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-gray-100 border border-gray-200/70 p-3 rounded-2xl rounded-bl-sm flex items-center gap-2 shadow-xs text-gray-500">
-                  <Loader2 className="w-4 h-4 animate-spin text-[#0071e3]" />
+                  <Loader2 className="w-4 h-4 animate-spin text-emerald-600" />
                   <span className="text-xs font-medium">Thinking...</span>
                 </div>
               </div>
@@ -147,12 +149,12 @@ const AIChat: React.FC = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask about projects, RBC, Kafka..."
-                className="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-xl pl-4 pr-12 py-3 focus:outline-none focus:border-[#0071e3] focus:ring-1 focus:ring-[#0071e3] transition-all placeholder:text-gray-400"
+                className="w-full bg-white border border-gray-300 text-gray-900 text-sm rounded-xl pl-4 pr-12 py-3 focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all placeholder:text-gray-400"
               />
               <button
                 onClick={handleSend}
                 disabled={isLoading || !inputValue.trim()}
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-xs"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-xs"
               >
                 {isLoading ? <Sparkles className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
               </button>

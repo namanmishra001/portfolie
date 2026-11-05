@@ -58,11 +58,11 @@ const Navbar: React.FC = () => {
               onClick={(e) => handleNavClick(e, '#about')}
               className="flex items-center gap-2.5 group cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#0071e3] to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-xs group-hover:scale-105 transition-transform">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white font-bold text-sm shadow-xs group-hover:scale-105 transition-transform">
                 NM
               </div>
               <div className="flex flex-col">
-                <span className="text-base sm:text-lg font-display font-bold tracking-tight text-gray-900 group-hover:text-[#0071e3] transition-colors leading-tight">
+                <span className="text-base sm:text-lg font-display font-bold tracking-tight text-gray-900 group-hover:text-emerald-600 transition-colors leading-tight">
                   Naman Mishra
                 </span>
                 <span className="text-[10px] sm:text-[11px] font-medium text-gray-500 flex items-center gap-1">
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
                         : 'text-gray-600 hover:text-gray-900 hover:bg-white/60'
                     }`}
                   >
-                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#0071e3]' : 'text-gray-400'}`} />
+                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-emerald-600' : 'text-gray-400'}`} />
                     <span>{item.label}</span>
                   </a>
                 );
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
               <a 
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-xs hover:shadow-sm active:scale-[0.98] flex items-center gap-1"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-xs hover:shadow-sm active:scale-[0.98] flex items-center gap-1"
               >
                 <span>Get in Touch</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
               <a 
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="bg-[#0071e3] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs"
+                className="bg-emerald-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs"
               >
                 Contact
               </a>
@@ -160,16 +160,16 @@ const Navbar: React.FC = () => {
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`min-h-[44px] text-sm font-medium p-3 rounded-xl flex items-center justify-between transition-colors ${
                   isActive 
-                    ? 'bg-blue-50 text-[#0071e3] font-semibold' 
+                    ? 'bg-emerald-50 text-emerald-700 font-semibold' 
                     : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-[#0071e3]' : 'text-gray-400'}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-emerald-600' : 'text-gray-400'}`} />
                   <span>{item.label}</span>
                 </div>
                 {isActive && (
-                  <span className="w-2 h-2 rounded-full bg-[#0071e3]" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
                 )}
               </a>
             );
@@ -187,7 +187,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="min-h-[44px] flex items-center justify-center gap-1.5 bg-[#0071e3] text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-xs"
+              className="min-h-[44px] flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-xs"
             >
               <span>Get In Touch</span>
               <ArrowUpRight className="w-4 h-4" />

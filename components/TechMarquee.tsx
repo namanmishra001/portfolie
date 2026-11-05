@@ -41,7 +41,7 @@ const TechMarquee: React.FC = () => {
               key={`${tech.name}-${index}`} 
               className="flex flex-col items-center justify-center mx-5 sm:mx-8 group cursor-default transition-all duration-300 shrink-0"
             >
-              <div className="w-12 h-12 flex items-center justify-center mb-2.5 p-2 rounded-xl bg-gray-50 border border-gray-200/80 shadow-2xs group-hover:scale-105 group-hover:bg-blue-50/50 group-hover:border-blue-200 transition-all">
+              <div className="w-12 h-12 flex items-center justify-center mb-2.5 p-2 rounded-xl bg-gray-50 border border-gray-200/80 shadow-2xs group-hover:scale-105 group-hover:bg-emerald-50/50 group-hover:border-emerald-200 transition-all">
                 <img 
                   src={tech.icon} 
                   alt={tech.name} 

@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       />
 
       {/* Gentle soft ambient glow in the background */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-blue-100/50 via-indigo-100/40 to-transparent blur-3xl pointer-events-none -z-0" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-emerald-100/40 via-teal-100/30 to-transparent blur-3xl pointer-events-none -z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -41,21 +41,21 @@ const Hero: React.FC = () => {
             className="lg:col-span-7 flex flex-col items-start text-left"
           >
             {/* Single, authoritative Title Kicker */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 text-[#0071e3] text-xs font-semibold mb-5 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-700 text-xs font-semibold mb-5 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Lead I – Software Engineering</span>
             </div>
 
-            {/* Main Headline */}
+            {/* Main Headline with Fresh Emerald Gradient */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 tracking-tight leading-[1.12] mb-5">
               Architecting secure, high-throughput{' '}
-              <span className="bg-gradient-to-r from-[#0071e3] to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
                 distributed systems
               </span>{' '}
               & online-banking solutions.
             </h1>
 
-            {/* Professional Overview (clean without repetitive titles) */}
+            {/* Professional Overview */}
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mb-7">
               Over <strong className="text-gray-900 font-semibold">8+ years of experience</strong> building enterprise-scale backends using <span className="text-gray-900 font-medium">Java 21, Spring Boot, microservices, and Apache Kafka</span>. Currently delivering high-impact online-banking APIs, Vault credential security, and autonomous <span className="text-gray-900 font-medium">Agentic AI engineering workflows</span>.
             </p>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
               {/* Current Company */}
               <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
                 <div className="flex items-center gap-1.5 text-xs text-gray-500 font-medium mb-1">
-                  <Building2 className="w-3.5 h-3.5 text-[#0071e3]" />
+                  <Building2 className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Current Company</span>
                 </div>
                 <div className="text-sm sm:text-base font-bold text-gray-900">UST</div>
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               {/* Current Client */}
               <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
                 <div className="flex items-center gap-1.5 text-xs text-gray-500 font-medium mb-1">
-                  <Landmark className="w-3.5 h-3.5 text-[#0071e3]" />
+                  <Landmark className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Current Client</span>
                 </div>
                 <div className="text-sm sm:text-base font-bold text-gray-900">RBC (Banking)</div>
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               {/* Current Work Location */}
               <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
                 <div className="flex items-center gap-1.5 text-xs text-gray-500 font-medium mb-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#0071e3]" />
+                  <MapPin className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Work Location</span>
                 </div>
                 <div className="text-sm sm:text-base font-bold text-gray-900">Toronto, Canada</div>
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
               {/* Education Details */}
               <div className="p-3 sm:p-3.5 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
                 <div className="flex items-center gap-1.5 text-xs text-gray-500 font-medium mb-1">
-                  <GraduationCap className="w-3.5 h-3.5 text-[#0071e3]" />
+                  <GraduationCap className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Education</span>
                 </div>
                 <div className="text-sm sm:text-base font-bold text-gray-900" title="Masters in Computer Applications">
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <a
                 href="#experience"
-                className="min-h-[48px] px-6 py-3 rounded-xl bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold text-sm shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
+                className="min-h-[48px] px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group active:scale-[0.98]"
               >
                 <span>View Career Experience</span>
                 <ArrowDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
@@ -113,15 +113,15 @@ const Hero: React.FC = () => {
 
               <a
                 href="#skills"
-                className="min-h-[48px] px-5 py-3 rounded-xl bg-white hover:bg-gray-50 text-gray-800 font-semibold text-sm border border-gray-200/90 shadow-xs hover:border-gray-300 transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
+                className="min-h-[48px] px-5 py-3 rounded-xl bg-white hover:bg-emerald-50/50 text-gray-800 hover:text-emerald-700 font-semibold text-sm border border-gray-200/90 hover:border-emerald-300 shadow-xs transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
               >
-                <Cpu className="w-4 h-4 text-[#0071e3]" />
+                <Cpu className="w-4 h-4 text-emerald-600" />
                 <span>Explore Skills</span>
               </a>
 
               <a
                 href={SOCIAL_LINKS.phone}
-                className="min-h-[48px] px-4 py-3 rounded-xl bg-white hover:bg-gray-50 text-gray-700 font-medium text-sm border border-gray-200/90 shadow-xs hover:border-gray-300 transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="min-h-[48px] px-4 py-3 rounded-xl bg-white hover:bg-emerald-50/50 text-gray-700 hover:text-emerald-700 font-medium text-sm border border-gray-200/90 hover:border-emerald-300 shadow-xs transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
                 title="Direct Phone Line"
               >
                 <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -140,7 +140,7 @@ const Hero: React.FC = () => {
             <div className="relative w-full max-w-md">
               
               {/* Subtle back ambient accent */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-[32px] blur-xl opacity-70 pointer-events-none" />
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/15 to-teal-400/15 rounded-[32px] blur-xl opacity-60 pointer-events-none" />
 
               {/* Main Photo Card */}
               <div className="relative bg-white rounded-3xl p-3 sm:p-4 border border-gray-200/90 shadow-xl overflow-hidden">
@@ -159,18 +159,18 @@ const Hero: React.FC = () => {
                     }}
                   />
                   
-                  {/* Subtle vignette/gradient at bottom of photo for text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                  {/* Subtle soft gradient at bottom of photo for text contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
 
                   {/* Overlaid Badges on Image */}
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-medium">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-medium">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                       <span>UST · Client: RBC</span>
                     </div>
 
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-medium">
-                      <MapPin className="w-3 h-3 text-blue-400" />
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-medium">
+                      <MapPin className="w-3 h-3 text-emerald-400" />
                       <span>Toronto, Canada</span>
                     </div>
                   </div>
@@ -178,8 +178,8 @@ const Hero: React.FC = () => {
                   {/* Bottom Image Info */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <div className="text-xl font-bold font-display leading-tight">Naman Mishra</div>
-                    <div className="text-xs text-blue-200 font-medium mt-1 flex items-center gap-1.5">
-                      <GraduationCap className="w-3.5 h-3.5 text-blue-300" />
+                    <div className="text-xs text-emerald-200 font-medium mt-1 flex items-center gap-1.5">
+                      <GraduationCap className="w-3.5 h-3.5 text-emerald-300" />
                       <span>Masters in Computer Applications (MCA)</span>
                     </div>
                   </div>
@@ -188,11 +188,11 @@ const Hero: React.FC = () => {
                 {/* Quick Info Strip Below Portrait */}
                 <div className="mt-3.5 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-600 px-1">
                   <div className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-[#0071e3]" />
+                    <ShieldCheck className="w-4 h-4 text-emerald-600" />
                     <span className="font-medium text-gray-800">Vault & Cloud Security</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Cpu className="w-4 h-4 text-indigo-600" />
+                    <Cpu className="w-4 h-4 text-teal-600" />
                     <span className="font-medium text-gray-800">Agentic AI & Kafka</span>
                   </div>
                 </div>
@@ -201,9 +201,9 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-gray-100">
                   <a
                     href={SOCIAL_LINKS.email}
-                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-[#0071e3] text-gray-700 text-xs font-medium transition-colors border border-gray-200/60"
+                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-gray-50 hover:bg-emerald-50 hover:text-emerald-700 text-gray-700 text-xs font-medium transition-colors border border-gray-200/60"
                   >
-                    <Mail className="w-3.5 h-3.5 text-[#0071e3]" />
+                    <Mail className="w-3.5 h-3.5 text-emerald-600" />
                     <span>Email</span>
                   </a>
 
@@ -219,9 +219,9 @@ const Hero: React.FC = () => {
                     href={SOCIAL_LINKS.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-[#0071e3] text-gray-700 text-xs font-medium transition-colors border border-gray-200/60"
+                    className="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-gray-50 hover:bg-emerald-50 hover:text-emerald-700 text-gray-700 text-xs font-medium transition-colors border border-gray-200/60"
                   >
-                    <ExternalLink className="w-3.5 h-3.5 text-blue-600" />
+                    <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />
                     <span>LinkedIn</span>
                   </a>
                 </div>

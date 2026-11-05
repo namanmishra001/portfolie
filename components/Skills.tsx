@@ -49,7 +49,7 @@ export const Skills: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#0071e3] font-semibold mb-2 block">
+          <span className="text-xs font-mono uppercase tracking-widest text-emerald-700 font-semibold mb-2 block">
             Technical Proficiency
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-gray-900 mb-3 sm:mb-4">
@@ -96,7 +96,7 @@ export const Skills: React.FC = () => {
               onClick={() => setIndicatorStyle('progress')}
               className={`min-h-[38px] flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 indicatorStyle === 'progress'
-                  ? 'bg-[#0071e3] text-white shadow-xs'
+                  ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -107,7 +107,7 @@ export const Skills: React.FC = () => {
               onClick={() => setIndicatorStyle('stars')}
               className={`min-h-[38px] flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 indicatorStyle === 'stars'
-                  ? 'bg-[#0071e3] text-white shadow-xs'
+                  ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -137,7 +137,7 @@ export const Skills: React.FC = () => {
                     {/* Category Title Header */}
                     <div className="flex items-center justify-between pb-3.5 sm:pb-4 mb-4 sm:mb-5 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 sm:p-2.5 rounded-xl bg-blue-50 text-[#0071e3] border border-blue-100">
+                        <div className="p-2 sm:p-2.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-100">
                           <Icon className="w-4 h-4 sm:w-5 h-5" />
                         </div>
                         <div>
@@ -170,7 +170,7 @@ export const Skills: React.FC = () => {
                                     {skill.experience}
                                   </span>
                                 )}
-                                <span className="text-[10px] sm:text-[11px] font-semibold text-[#0071e3]">
+                                <span className="text-[10px] sm:text-[11px] font-semibold text-emerald-700">
                                   {skill.tier}
                                 </span>
                                 {indicatorStyle === 'progress' && (
@@ -189,7 +189,7 @@ export const Skills: React.FC = () => {
                                   whileInView={{ width: `${skill.level}%` }}
                                   viewport={{ once: true }}
                                   transition={{ duration: 0.8, ease: "easeOut" }}
-                                  className="h-full rounded-full bg-[#0071e3] group-hover:bg-[#0077ed] transition-all"
+                                  className="h-full rounded-full bg-emerald-600 group-hover:bg-emerald-700 transition-all"
                                 />
                               </div>
                             ) : (
@@ -226,7 +226,7 @@ export const Skills: React.FC = () => {
                   {/* Card Footer indicator */}
                   <div className="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-gray-100 flex items-center justify-between text-[10px] sm:text-[11px] text-gray-500">
                     <span className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0071e3]" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                       Production Deployed
                     </span>
                     <span className="font-mono">Enterprise Level</span>
