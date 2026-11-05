@@ -165,9 +165,13 @@ export const SKILLS: SkillCategory[] = [
 export const EXPERIENCE: Experience[] = [
   {
     id: "ust-rbc",
-    company: "UST, Toronto — Client: RBC (Online Banking)",
+    company: "UST, Toronto",
+    client: "RBC (Royal Bank of Canada)",
     role: "Lead I – Software Engineering",
     period: "May 2026 – Present",
+    systemName: "Enterprise Online Banking Core",
+    architectureType: "Zero-Trust Microservices & Agentic AI Workflows",
+    keyMetrics: ["Zero-Trust Vault", "Apigee Migration", "RestClient Upgrade", "Agentic Jira-to-PR"],
     description: [
       "Secured Spring Boot services with HashiCorp Vault, eliminating hardcoded credentials and committed keystore material while remediating encryption-key risks.",
       "Delivered enterprise Apigee migrations for high-volume online-banking APIs.",
@@ -175,13 +179,17 @@ export const EXPERIENCE: Experience[] = [
       "Created an AI-assisted logging-security audit skill to prevent credential leakage and ensure banking compliance.",
       "Engineered agentic Jira-to-PR workflows and reusable AI-ready service bootstrapping frameworks."
     ],
-    tech: ["Java 21", "Spring Boot", "Vault", "Apigee", "Agentic AI", "RestClient", "OpenTelemetry"]
+    tech: ["Java 21", "Spring Boot", "HashiCorp Vault", "Apigee", "Agentic AI", "RestClient", "OpenTelemetry", "Prometheus"]
   },
   {
     id: "ust-albertsons",
-    company: "UST, Vancouver — Client: Albertsons (APP)",
+    company: "UST, Vancouver",
+    client: "Albertsons (APP)",
     role: "Lead I – Software Engineering",
     period: "March 2021 – May 2026",
+    systemName: "Cloud-Native Partner Portal (APP)",
+    architectureType: "High-Throughput Kafka CDC & Cloud-Native Microservices",
+    keyMetrics: ["-70% CPU Usage (80% ➔ 10%)", "Kafka CDC Pipelines", "DocuSign OAuth 2.0 / JWT", "Azure Cloud APIM"],
     description: [
       "Led backend/API design and cloud-native architecture implementation using Java, Spring Boot across Bangalore & Vancouver.",
       "Integrated DocuSign REST APIs enabling envelope creation, sending, automated reminders, and void operations with secure OAuth 2.0/JWT auth.",
@@ -189,26 +197,34 @@ export const EXPERIENCE: Experience[] = [
       "Reduced application CPU usage from 80% to 10% by refactoring core components and optimizing database access patterns.",
       "Utilized Azure Blob Storage, Key Vault, and APIM for secure and scalable enterprise cloud infrastructure."
     ],
-    tech: ["Java", "Spring Boot", "Apache Kafka", "DocuSign API", "Azure", "MongoDB", "OAuth 2.0"]
+    tech: ["Java", "Spring Boot", "Apache Kafka", "DocuSign API", "Azure", "MongoDB", "OAuth 2.0", "Redis"]
   },
   {
     id: "boeing",
-    company: "Boeing, Bangalore — Avionics & Cabin Systems",
+    company: "Boeing, Bangalore",
+    client: "The Boeing Company (Cabin Systems)",
     role: "Software Engineer (Avionics)",
     period: "June 2019 – March 2021",
+    systemName: "Avionics Cabin Video & Telemetry (CVMS)",
+    architectureType: "Mission-Critical Avionics & Real-Time MQTT Telemetry",
+    keyMetrics: ["Avionics Safety Specs", "Commercial Aircraft CVMS", "Real-Time MQTT Telemetry", "Scrum Master Leadership"],
     description: [
       "Full Stack Engineer building onboard cabin systems and cloud media applications for commercial aircraft.",
       "Used Spring framework, Angular 7, and MySQL as core development structure.",
       "Involved in end-to-end technical design, microservice integration, and avionics specifications.",
       "Actively led Scrum Master activities, sprint retrospectives, and agile ceremonies."
     ],
-    tech: ["Spring Boot", "Angular 7", "MySQL", "Azure", "MQTT", "Avionics"]
+    tech: ["Spring Boot", "Angular 7", "MySQL", "Azure", "MQTT", "Avionics Specs"]
   },
   {
     id: "virtusa",
-    company: "Virtusa, Bangalore — Client: British Telecom (MyPM)",
+    company: "Virtusa, Bangalore",
+    client: "British Telecom (MyPM)",
     role: "Associate Consultant",
     period: "March 2018 – July 2019",
+    systemName: "Telecom Order Delivery Platform (MyPM)",
+    architectureType: "High-Concurrency REST & Oracle DB Engine",
+    keyMetrics: ["High-Volume Spring REST", "JUnit / Mockito TDD", "Oracle DB Concurrency", "Automated Task Fulfillment"],
     description: [
       "Developed high-throughput REST resources using Spring framework and Oracle DB (SQL Developer).",
       "Implemented comprehensive unit test suites from scratch using JUnit and Mockito.",

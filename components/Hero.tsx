@@ -150,6 +150,13 @@ const Hero: React.FC = () => {
                     alt="Naman Mishra"
                     className="w-full h-full object-cover object-center filter contrast-[1.03]"
                     loading="eager"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallback) {
+                        target.dataset.fallback = 'true';
+                        target.src = '/IMG_4299.jpg';
+                      }
+                    }}
                   />
                   
                   {/* Subtle vignette/gradient at bottom of photo for text contrast */}

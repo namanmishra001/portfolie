@@ -1,8 +1,12 @@
 export interface Experience {
   id: string;
   company: string;
+  client?: string;
   role: string;
   period: string;
+  systemName?: string;
+  architectureType?: string;
+  keyMetrics?: string[];
   description: string[];
   tech: string[];
 }
