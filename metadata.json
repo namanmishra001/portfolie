@@ -1,5 +1,8 @@
 {
-  "name": "Naman Mishra - Backend Lead Portfolio",
+  "name": "Naman- Portfolio",
   "description": "Interactive portfolio for Naman Mishra, showcasing 8+ years of backend engineering, microservices, and distributed systems expertise.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

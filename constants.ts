@@ -9,124 +9,252 @@ import {
   Linkedin, 
   Github, 
   Mail,
-  Award
+  Award,
+  FolderGit2
 } from 'lucide-react';
 
 export const RESUME_TEXT = `
-Naman Mishra - Backend Lead with 8+ years of experience.
-Expertise in Microservices, Event-Driven Systems, AI (RAG, LLM), Azure, Java, Spring Boot.
-Current Role: Lead Engineer at UST Global (Client: Safeway Inc.), leading a team of 8.
-Previous: Software Engineer at The Boeing Company, Associate Consultant at Virtusa.
-Key Skills: Java 8+, Spring Boot, Microservices, Azure (Blobs, Cosmos DB), React, Angular, Kafka, MQTT, SQL, MongoDB, OpenTelemetry.
-Projects: SMATCH (Safeway), CVMS (Boeing), UMSA (Boeing), My-PM (BT).
-Education: MCA (89%).
-Awards: Star Performer of Sprint multiple times.
-Languages: English (Expert), Hindi (Expert).
+Naman Mishra
+Designation: Lead I – Software Engineering @ UST Canada (Toronto)
+Contact: 778-723-7436 | Email: mnaman1201@gmail.com | Location: Toronto, Canada
+Academic Details: Masters in Computer Applications (MCA)
+
+Professional Overview:
+Lead Engineer with 8+ years of experience building secure, scalable distributed systems using Java, Spring Boot, microservices, event-driven architecture, and Kafka. Experienced in Azure cloud services, API modernization, CI/CD automation, application security, and observability using OpenTelemetry, Prometheus, and Grafana. Currently delivering online-banking solutions at RBC and developing agentic engineering workflows and AI-assisted secure logging capabilities.
+
+Professional Experience:
+1. UST, Toronto — Lead I – Software Engineering
+Client: RBC – Online Banking | May 2026 - Present
+- Secured Spring Boot services with Vault, eliminating hardcoded credentials and committed keystore material while remediating encryption-key risks.
+- Delivered Apigee migrations for online-banking APIs.
+- Modernized HTTP integrations from RestTemplate to RestClient, retired obsolete APIs, and improved API latency and memory efficiency.
+- Created an AI-assisted logging-security audit skill.
+- Implemented agentic Jira-to-PR workflows and reusable AI-ready service bootstrapping.
+
+2. UST, Vancouver — Lead I – Software Engineering
+Client: Albertsons – APP | Bangalore, India & Vancouver, BC | March 2021 - May 2026
+- Leading backend/API design and implementation using Java, Spring Boot, and cloud-native architecture.
+- Integrated DocuSign REST APIs enabling envelope creation, sending, reminders, and void operations with secure OAuth 2.0/JWT auth.
+- Built CDC pipelines using Kafka to stream MongoDB change events into downstream microservices.
+- Reduced application CPU usage from 80% to 10% by refactoring core components and optimizing database access patterns.
+- Utilized Azure Blob Storage, Key Vault, and APIM for secure and scalable application infrastructure.
+
+3. Boeing, Bangalore — Software Engineer (Avionics)
+Client / Domain: Boeing - Cabin System | June 2019 - March 2021
+- Full Stack Engineer.
+- Used Spring framework, Angular 7 & MySQL as the basic development structure.
+- Involved in Technical design and implementation.
+- Involved in Scrum Master activities.
+
+4. Virtusa, Bangalore — Associate Consultant
+Client: British Telecom – MyPM | March 2018 – July 2019
+- Used Spring framework, Angular, Oracle DB (SQL DEVELOPER) as the basic development structure.
+- Developed resources by using Spring REST.
+- Implemented unit testing in project from scratch using JUnit and Mockito.
+- Helped the team in resolving defects and cross-checking functionality with log4j.
+
+Technical Toolkit:
+- AI & Modern Engineering: Agentic AI, MCP, Retrieval-Augmented Generation (RAG), LLM Integration (OpenAI, DeepSeek, Ollama), Document Embeddings & Vector Search, Prompt Engineering, ChatBot, GitHub Copilot, Devin.
+- Core Backend & Architecture: Microservices Architecture, Sync/Async API Design, Event-Driven Architecture, Resilience Patterns (Retry, Circuit Breaker, Idempotency), Java 21, Spring Boot (Advanced Configuration), Spring Security (JWT/OAuth2, RBAC), Hibernate/JPA, Design Patterns, OOPS, JEE/J2EE.
+- Cloud & DevOps: Microsoft Azure (Blobs, Cosmos DB), APIGEE, HashiCorp Vault, Docker, CI/CD (Bamboo, Bitbucket), Sonar, Veracode.
+- Observability: OpenTelemetry, Prometheus, Grafana, Dynatrace.
+- Messaging & Distributed: Apache Kafka (CDC Pipelines).
+- Database: MongoDB, MySQL, Oracle, PgVector.
+- Tools: DocuSign, Swagger, Postman, Git/SVN, JUnit/Mockito, IntelliJ, JIRA, Confluence.
+- Frontend: React, Angular 7, HTML, CSS.
 `;
 
-export const SOCIAL_LINKS = {
+export const CONTACT_INFO = {
+  name: "Naman Mishra",
+  title: "Lead I – Software Engineering @ UST Canada (Toronto)",
+  phone: "778-723-7436",
+  email: "mnaman1201@gmail.com",
+  location: "Toronto, ON, Canada",
+  education: "Masters in Computer Applications (MCA)",
   linkedin: "https://www.linkedin.com/in/naman-mishra-6bb257190",
-  email: "mailto:mnaman1201@gmail.com", // Placeholder
-  github: "https://github.com" // Placeholder
+  github: "https://github.com",
+};
+
+export const SOCIAL_LINKS = {
+  linkedin: CONTACT_INFO.linkedin,
+  email: `mailto:${CONTACT_INFO.email}`,
+  phone: `tel:${CONTACT_INFO.phone.replace(/[^0-9]/g, '')}`,
+  github: CONTACT_INFO.github,
 };
 
 export const SKILLS: SkillCategory[] = [
   {
-    category: "AI & Modern Engineering",
-    items: ["RAG", "LLM Integration (OpenAI, DeepSeek)", "Vector Search", "Prompt Engineering", "Document Embeddings"]
+    category: "Core Backend & Architecture",
+    items: [
+      { name: "Java 21", level: 96, tier: "Expert", experience: "8+ yrs" },
+      { name: "Spring Boot (Advanced Config)", level: 95, tier: "Expert", experience: "8+ yrs" },
+      { name: "Microservices Architecture", level: 94, tier: "Expert", experience: "8+ yrs" },
+      { name: "Event-Driven Architecture", level: 92, tier: "Expert", experience: "6+ yrs" },
+      { name: "Spring Security (JWT/OAuth2, RBAC)", level: 90, tier: "Expert", experience: "6+ yrs" },
+      { name: "Resilience (Retry, Circuit Breaker)", level: 90, tier: "Advanced", experience: "5+ yrs" },
+      { name: "Sync/Async API Design", level: 92, tier: "Expert", experience: "7+ yrs" },
+      { name: "Hibernate / JPA", level: 88, tier: "Advanced", experience: "6+ yrs" }
+    ]
   },
   {
-    category: "Backend Core",
-    items: ["Java 8+", "Spring Boot", "Microservices", "RESTful APIs", "Event-Driven Architecture", "Hibernate/JPA", "Spring Security"]
+    category: "AI & Modern Engineering",
+    items: [
+      { name: "Agentic AI & Workflows", level: 90, tier: "Expert", experience: "Active at RBC" },
+      { name: "Model Context Protocol (MCP)", level: 86, tier: "Advanced", experience: "Modern" },
+      { name: "RAG Architecture", level: 88, tier: "Advanced", experience: "Enterprise" },
+      { name: "LLM Integration (OpenAI, DeepSeek, Ollama)", level: 90, tier: "Advanced", experience: "Production" },
+      { name: "Vector Search & PgVector", level: 86, tier: "Advanced", experience: "Production" },
+      { name: "Prompt Engineering", level: 90, tier: "Advanced", experience: "2+ yrs" },
+      { name: "GitHub Copilot & Devin", level: 92, tier: "Expert", experience: "Daily Stack" }
+    ]
   },
   {
     category: "Cloud & DevOps",
-    items: ["Microsoft Azure", "Docker", "CI/CD (Bamboo, Bitbucket)", "Cosmos DB", "OpenTelemetry"]
+    items: [
+      { name: "Microsoft Azure (Blobs, Cosmos DB)", level: 90, tier: "Expert", experience: "5+ yrs" },
+      { name: "APIGEE API Management", level: 89, tier: "Advanced", experience: "RBC Banking" },
+      { name: "HashiCorp Vault", level: 90, tier: "Advanced", experience: "Security Modernization" },
+      { name: "Docker", level: 88, tier: "Advanced", experience: "6+ yrs" },
+      { name: "CI/CD (Bamboo, Bitbucket)", level: 86, tier: "Advanced", experience: "Enterprise" },
+      { name: "Sonar & Veracode", level: 85, tier: "Advanced", experience: "AppSec" }
+    ]
   },
   {
-    category: "Distributed Systems",
-    items: ["Apache Kafka", "MQTT", "Resilience Patterns (Circuit Breaker)", "System Design"]
+    category: "Messaging & Distributed",
+    items: [
+      { name: "Apache Kafka", level: 94, tier: "Expert", experience: "5+ yrs" },
+      { name: "CDC (Change Data Capture)", level: 90, tier: "Advanced", experience: "Albertsons APP" },
+      { name: "Event Streaming Pipelines", level: 92, tier: "Expert", experience: "High-Throughput" },
+      { name: "Distributed Systems", level: 92, tier: "Expert", experience: "8+ yrs" },
+      { name: "Idempotency & Fault Tolerance", level: 90, tier: "Advanced", experience: "Resilience" }
+    ]
   },
   {
-    category: "Frontend",
-    items: ["React.js", "Angular 7", "HTML5", "CSS3", "Tailwind"]
+    category: "Observability",
+    items: [
+      { name: "OpenTelemetry", level: 88, tier: "Advanced", experience: "RBC Banking" },
+      { name: "Prometheus", level: 87, tier: "Advanced", experience: "Metrics" },
+      { name: "Grafana", level: 88, tier: "Advanced", experience: "Dashboards" },
+      { name: "Dynatrace", level: 85, tier: "Advanced", experience: "APM" },
+      { name: "Application Performance Monitoring", level: 90, tier: "Advanced", experience: "Production" }
+    ]
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "MongoDB", level: 90, tier: "Advanced", experience: "CDC Streams" },
+      { name: "MySQL", level: 92, tier: "Expert", experience: "Boeing Systems" },
+      { name: "Oracle DB", level: 88, tier: "Advanced", experience: "BT MyPM" },
+      { name: "PgVector", level: 86, tier: "Advanced", experience: "RAG & Search" },
+      { name: "Azure Cosmos DB", level: 87, tier: "Advanced", experience: "Cloud NoSQL" }
+    ]
+  },
+  {
+    category: "Frontend & Tools",
+    items: [
+      { name: "React", level: 85, tier: "Advanced", experience: "4+ yrs" },
+      { name: "Angular 7", level: 84, tier: "Advanced", experience: "Boeing & BT" },
+      { name: "DocuSign REST APIs", level: 93, tier: "Expert", experience: "OAuth 2.0 / JWT" },
+      { name: "Swagger & Postman", level: 95, tier: "Expert", experience: "API Testing" },
+      { name: "JUnit & Mockito", level: 92, tier: "Expert", experience: "TDD / Unit Tests" },
+      { name: "IntelliJ, JIRA & Confluence", level: 95, tier: "Expert", experience: "Workflows" }
+    ]
   }
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
-    id: "ust",
-    company: "UST Global (Client: Safeway Inc.)",
-    role: "Lead Engineer",
-    period: "March 2021 - Present",
+    id: "ust-rbc",
+    company: "UST, Toronto — Client: RBC (Online Banking)",
+    role: "Lead I – Software Engineering",
+    period: "May 2026 – Present",
     description: [
-      "Leading a team of 8 members involved in technical design, implementation, and documentation.",
-      "Optimized application performance by reducing CPU utilization from 80% to 10% through code refactoring.",
-      "Hands-on with Microsoft Azure Blobs and Cosmos DB.",
-      "Collaborated with DevOps for CI/CD pipelines."
+      "Secured Spring Boot services with HashiCorp Vault, eliminating hardcoded credentials and committed keystore material while remediating encryption-key risks.",
+      "Delivered enterprise Apigee migrations for high-volume online-banking APIs.",
+      "Modernized HTTP integrations from RestTemplate to RestClient, retired obsolete APIs, and boosted API latency and memory efficiency.",
+      "Created an AI-assisted logging-security audit skill to prevent credential leakage and ensure banking compliance.",
+      "Engineered agentic Jira-to-PR workflows and reusable AI-ready service bootstrapping frameworks."
     ],
-    tech: ["Java", "Spring Boot", "React", "Azure", "SQL"]
+    tech: ["Java 21", "Spring Boot", "Vault", "Apigee", "Agentic AI", "RestClient", "OpenTelemetry"]
+  },
+  {
+    id: "ust-albertsons",
+    company: "UST, Vancouver — Client: Albertsons (APP)",
+    role: "Lead I – Software Engineering",
+    period: "March 2021 – May 2026",
+    description: [
+      "Led backend/API design and cloud-native architecture implementation using Java, Spring Boot across Bangalore & Vancouver.",
+      "Integrated DocuSign REST APIs enabling envelope creation, sending, automated reminders, and void operations with secure OAuth 2.0/JWT auth.",
+      "Built resilient CDC pipelines using Apache Kafka to stream MongoDB change events into downstream microservices.",
+      "Reduced application CPU usage from 80% to 10% by refactoring core components and optimizing database access patterns.",
+      "Utilized Azure Blob Storage, Key Vault, and APIM for secure and scalable enterprise cloud infrastructure."
+    ],
+    tech: ["Java", "Spring Boot", "Apache Kafka", "DocuSign API", "Azure", "MongoDB", "OAuth 2.0"]
   },
   {
     id: "boeing",
-    company: "The Boeing Company",
-    role: "Software Engineer",
-    period: "Previous",
+    company: "Boeing, Bangalore — Avionics & Cabin Systems",
+    role: "Software Engineer (Avionics)",
+    period: "June 2019 – March 2021",
     description: [
-      "Worked as a Full Stack Developer (Backend + Frontend).",
-      "Involved in Scrum Master activities and technical design.",
-      "Developed cloud-based onboard systems."
+      "Full Stack Engineer building onboard cabin systems and cloud media applications for commercial aircraft.",
+      "Used Spring framework, Angular 7, and MySQL as core development structure.",
+      "Involved in end-to-end technical design, microservice integration, and avionics specifications.",
+      "Actively led Scrum Master activities, sprint retrospectives, and agile ceremonies."
     ],
-    tech: ["Spring Boot", "Angular", "MySQL", "Azure", "MQTT"]
+    tech: ["Spring Boot", "Angular 7", "MySQL", "Azure", "MQTT", "Avionics"]
   },
   {
     id: "virtusa",
-    company: "Virtusa (Client: British Telecom)",
+    company: "Virtusa, Bangalore — Client: British Telecom (MyPM)",
     role: "Associate Consultant",
-    period: "Previous",
+    period: "March 2018 – July 2019",
     description: [
-      "Developed resources using Spring REST.",
-      "Implemented unit testing from scratch using Junit/Mockito.",
-      "Resolved complex defects and performed log analysis."
+      "Developed high-throughput REST resources using Spring framework and Oracle DB (SQL Developer).",
+      "Implemented comprehensive unit test suites from scratch using JUnit and Mockito.",
+      "Assisted delivery team in resolving complex production defects and cross-checking functionality using Log4j."
     ],
-    tech: ["Spring", "Angular", "Oracle DB", "Log4j"]
+    tech: ["Spring REST", "Angular", "Oracle DB", "JUnit / Mockito", "Log4j"]
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
-    id: "smatch",
-    title: "APP - Albertson's Partner Portal",
-    client: "Safeway Inc.",
-    description: "Modernization of a legacy mainframe application for SMIC maintenance. The solution streamlines item setup and prevents SLU blocking by eliminating dependencies.",
-    tech: ["Azure", "Java 8", "Spring Boot", "React.js", "Microservices", "Oracle"]
+    id: "rbc-banking",
+    title: "RBC Online Banking Modernization",
+    client: "RBC (Royal Bank of Canada)",
+    description: "Enterprise Apigee API migration, RestClient modernizations, and HashiCorp Vault security integrations. Pioneered AI-assisted logging-security audit and agentic Jira-to-PR workflows.",
+    tech: ["Java 21", "Spring Boot", "Vault", "Apigee", "Agentic AI", "RestClient"],
+    image: "/projects/solid-starters.png"
   },
   {
-    id: "cvms",
-    title: "CVMS (On Board System)",
+    id: "albertsons-app",
+    title: "Albertsons Partner Portal (APP)",
+    client: "Albertsons / Safeway",
+    description: "Cloud-native portal with DocuSign REST OAuth 2.0/JWT integration, Kafka CDC streaming pipelines for MongoDB change events, and a 70% CPU usage reduction via core architectural refactoring.",
+    tech: ["Java", "Spring Boot", "Apache Kafka", "DocuSign", "Azure", "MongoDB"],
+    image: "/projects/radix.png"
+  },
+  {
+    id: "boeing-cabin",
+    title: "Boeing Avionics Cabin Systems (CVMS)",
     client: "The Boeing Company",
-    description: "Cloud-based application enabling airlines to pull media (live stream, video, images) from airplanes connected to ground systems via MQTT.",
-    tech: ["Azure", "Java 8", "MQTT", "Spring Boot", "Angular 7", "MySQL"]
+    description: "Cloud-based onboard system enabling airlines to stream live media, video, and aircraft cabin sensor telemetry securely connected to ground systems via MQTT.",
+    tech: ["Spring Boot", "Angular 7", "MySQL", "Azure", "MQTT", "Avionics"],
+    image: "/projects/bond-cancellation.png"
   },
   {
-    id: "umsa",
-    title: "UMSA (Ground Based System)",
-    client: "The Boeing Company",
-    description: "Frontend-enabled platform used by airlines to manage configuration related to various aircraft modules.",
-    tech: ["PCF", "Java 8", "Spring Boot", "Angular 7", "MySQL"]
-  },
-  {
-    id: "mypm",
-    title: "My-PM",
+    id: "bt-mypm",
+    title: "British Telecom Delivery Platform (My-PM)",
     client: "British Telecom",
-    description: "Tool for Delivery Managers to access source system data, raise orders, and view task details to improve efficiency.",
-    tech: ["Java 8", "Spring Boot", "AngularJS", "Oracle", "Gradle"]
+    description: "Delivery Manager portal accessing telecom source system data, automating order raising, and tracking task fulfillment pipelines with robust unit test coverage.",
+    tech: ["Spring REST", "Angular", "Oracle DB", "JUnit / Mockito", "Log4j"],
+    image: "/projects/max-life.png"
   }
 ];
 
 export const NAV_ITEMS = [
   { label: 'About', href: '#about', icon: Terminal },
-  { label: 'Skills', href: '#skills', icon: Cpu },
   { label: 'Experience', href: '#experience', icon: Settings },
-  { label: 'Projects', href: '#projects', icon: Layout },
+  { label: 'Skills', href: '#skills', icon: Cpu },
 ];
